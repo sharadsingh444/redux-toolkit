@@ -15,11 +15,14 @@ const Products = () => {
 
     }, []);
     return (
-        <div>
+        <div className=' flex flex-wrap  '>
             {
                 products.map((product) => (
-                    <div>
-                        <img src={product.image} alt=''/>
+                    <div className='flex flex-col justify-center items-center w-[250px] h-[300px] m-2 bg-white p-1 border rounded-md '>
+                        <img className='w-[100px] h-[100px] my-3 ' src={product.image} alt=''/>
+                        <h4 className='font-bold m-2 flex justify-center items-center'>{product.title}</h4>
+                        <h5>{product.price}</h5>
+                        <button className='bg-violet-800 border rounded-md p-1 my-3'>Add to cart</button>
                         
                     </div>
 
